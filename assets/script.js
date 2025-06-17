@@ -12,7 +12,7 @@ let pokemones = [];
 // Obtener datos desde archivo local con fetch
 async function obtenerPokemones() {
     try {
-        const response = await fetch('./assets/pokemons.json');
+        const response = await fetch('assets/pokemons.json');
         const data = await response.json();
         pokemones = data;
         mostrarPokemones(pokemones);
