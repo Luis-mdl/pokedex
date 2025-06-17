@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assests/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -22,7 +21,7 @@
                     class="form-control search-input" 
                     placeholder="🔍 Buscar Pokémon..."
                     autocomplete="off"
-                />
+                >
             </div>
         </header>
 
@@ -50,12 +49,14 @@
                     </h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body" id="modalBody"></div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Content will be dynamically loaded -->
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="assests/script.js"></script>
+   <script type="module" src="assets/script.js"></script>
 </body>
 </html>
