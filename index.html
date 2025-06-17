@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokédex</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assest/style.css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="header text-center">
+            <div class="logo mb-3">
+                <i class="fas fa-dragon"></i> Pokédex
+            </div>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="form-control search-input" 
+                    placeholder="🔍 Buscar Pokémon..."
+                    autocomplete="off"
+                />
+            </div>
+        </header>
+
+        <div id="loadingSpinner" class="loading">
+            <i class="fas fa-spinner fa-spin fa-3x"></i>
+            <div class="mt-3">Cargando Pokédex...</div>
+        </div>
+
+        <div id="pokemonContainer" class="pokemon-grid" style="display: none;"></div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-search fa-3x mb-3"></i>
+            <div>No se encontraron Pokémon con ese nombre</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="pokemonModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Información del Pokémon
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/assest/script.js"></script>
+</body>
+</html>
